@@ -1,4 +1,3 @@
-# Full_Stack_MCA
 # MongoDB, Node.js, and React Programs Repository
 
 Welcome to the MongoDB, Node.js, and React Programs Repository! This repository contains a collection of 
