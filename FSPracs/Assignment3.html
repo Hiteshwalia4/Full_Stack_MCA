@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-3</title>
+    <script src="script.js"></script>
+    <style>
+        body {
+            margin-top: 80px;
+        }
+
+        label {
+            font-weight: bold;
+            display: inline-block;
+            vertical-align: middle;
+            width: 140px;
+        }
+
+        input,
+        button {
+            border-radius: 5px;
+            padding: 5px;
+            width: 200px;
+        }
+        
+
+        button {
+            background-color: #292c5e;
+            border: 3px solid red;
+            box-shadow: inset;
+            box-shadow: cornsilk;
+            color: white;
+            font-weight: 600;
+            width: 170px;
+            padding: 8px;
+        }
+    </style>
+    <script>
+        const fact = () => {
+    let n = document.getElementById("inp").value
+    let fac = 1
+    for (let i = 2; i <= n; i++)
+        fac = fac * i
+
+    document.getElementById("res").value = fac
+}
+const isPrime = () => {
+    let n = document.getElementById("inp").value
+    let flag=0
+    if(n==0 || n==1)
+        flag=1
+    for(let i=2;i<=n/2;i++){
+        if(n%i==0){
+            flag=1
+            break
+        }
+    }    
+    if(flag==0)
+        document.getElementById("res").value="It is a Prime Number"
+    else
+        document.getElementById("res").value="It is Not a Prime Number"    
+
+}
+const sumOfDig = () => {
+    let n = document.getElementById("inp").value
+    let sum=0
+    let i
+    while(n>0){
+        i=n%10
+        sum=sum+i
+        n=parseInt(n/10)
+    }
+    document.getElementById("res").value=sum
+}
+const prodOfDig = () => {
+    let n = document.getElementById("inp").value
+    let prod=1
+    let i
+    while(n>0){
+        i=n%10
+        prod=prod*i
+        n=parseInt(n/10)
+    }
+    document.getElementById("res").value=prod
+}
+    </script>
+</head>
+
+<body>
+    <center>
+        <form action="#">
+            <label>Enter a Number:</label>
+            <input id="inp" type="text"><br><br>
+            <button onclick="fact()">Find Factorial</button>
+            <button onclick="isPrime()">Check Prime</button>
+            <button onclick="sumOfDig()">Find Sum of Digits</button>
+            <button onclick="prodOfDig()">Product of Digits</button>
+            <button type="reset" style="margin-left: 45px;">Clear</button><br><br>
+            <label >Result:</label>
+            <input id="res" type="text">
+        </form>
+    </center>
+
+</body>
+
+</html>

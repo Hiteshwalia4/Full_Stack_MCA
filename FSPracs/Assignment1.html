@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment</title>
+  <style>
+    .container{
+    padding: 5px;
+    margin-top: 40px;
+    margin-left: 10px;
+}
+table{
+    margin-left:15px ;
+}
+.container label,.cno label{
+    display: inline-block;
+    width: 80px;
+    text-align: right;
+}
+.container input,.cno input,textarea{
+    border: 2px solid black;
+    border-style: inset;
+    display: inline-block;
+    vertical-align: middle;
+    width: 200px;    
+}
+.tab input{
+    width: 100px;
+    border: 2px solid black;
+    border-style: inset; 
+}
+
+table,td,th{
+    border: 1px solid grey;
+    border-style: double;
+}
+
+th{
+    text-align: left;
+}
+.last td{
+    text-align: right;   
+    border: none;
+}
+h3{
+    margin-left: 15px;
+}
+.details{
+    display: flex;
+}
+.cno{
+    margin:88px 0 0 45px;
+}
+.cno label{
+    width:110px; 
+}
+#exp{
+    width: 90px;
+}
+button{
+    padding: 5px;
+    width: 140px;
+    background-color: rgb(157, 147, 147);
+    font-weight: 600;
+    border: 3px solid black;
+    border-style:outset ;
+}
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <form action="#">
+      <div>
+        <label for="fname">Name: </label>
+        <input type="text" name="name" id="1"><br><br>
+      </div>
+      <div>
+        <label for="email">Email: </label>
+        <input type="email" name="mail" id="2"><br><br>
+      </div>
+      <div>
+        <label id="add">Address: </label>
+        <textarea id="3" cols="25" rows="3"></textarea><br><br>
+      </div>
+      <div>
+        <label>PostCode: </label>
+        <input type="text" id="4"><br>
+      </div>
+  </div>
+
+    <br><br>
+    <table class="tab">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Part Number</th>
+          <th>Quantity</th>
+          <th>Unit Price</th>
+          <th>Subtotal</th>
+        </tr>
+        <tr>
+          <td>Standard Box</td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+        </tr>
+        <tr>
+          <td>Premium Box</td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+        </tr>
+        <tr>
+          <td>Deluxe Box</td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+        </tr>
+        <tr>
+          <td>Super Deluxe Box</td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+        </tr>
+        <tr class="last">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>Total: </td>
+          <td><input type="text"></td>
+        </tr>
+      </thead>
+    </table>
+    <br><br>
+
+    <div class="details">
+      <div class="c2">
+        <h3>Credit Card Details</h3>
+      <dd>
+        Card Type: <br>
+        <input name="mc" type="radio" checked>
+        <label>Mastercard</label><br>
+        <input name="vi" type="radio" onclick="func1()">
+        <label>Visa</label><br>
+        <input name="ae" type="radio">
+        <label>American Express</label><br>
+        <input name="dc" type="radio">
+        <label>Diners Club</label><br><br>
+      </dd>
+    </div>
+    <div class="cno">
+      <label>Card Number: </label>
+      <input type="text"><br><br>
+      <label >Expiry Date: </label>
+      <input id="exp" type="text">
+    </div>
+  </div>
+    <br><br>
+    <dd>
+    <div>
+        <strong>
+          <label>Delivery Address: </label>
+        </strong>
+        <textarea  cols="20" rows="5"></textarea>
+      </div><br><br>
+      <button type="submit">Send Order</button>
+      <button type="reset">Clear Form</button>
+      <br><br><br>
+    </dd>
+  </form>
+</body>
+
+</html>
